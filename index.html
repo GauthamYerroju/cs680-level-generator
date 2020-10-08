@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Skyroads clone level generator</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Gautham Yerroju" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div id="container">
+        <section>
+            <h1 id="title">Skyroads Level Generator</h1>
+
+            <h2>What is this?</h2>
+            <p>This is a quick-and-dirty level generator for the Skyroads-esque game, made for the final project in
+                Computer Graphics class (CS680, UNR). It encodes the positions and dimensions of the floor and
+                obstacles
+                into text data,
+                which the game uses to dynamically build 3D models to populate the level.</p>
+
+            <p>After 2 all-nighters to get the project ready with my teammates Kevin (Green) and Hussain (Tazarvi),
+                I
+                created and tested this tool 2 hours before the final project deadline. Among other things, I was
+                responsible for
+                the dynamic level generator, and we got mad props from our competitors and the professor. Fun times!
+            </p>
+
+            <h2>Instructions</h2>
+            <ol>
+                <li>"Clear" button clears the level</li>
+                <li>"Add 10" button adds 10 more lines in the grid (increasing the road length)</li>
+                <li>Select either "Base" or "Obstacle" in the radio button to create the floor or wall respectively.
+                </li>
+                <li>Click and drag the mouse on the grid to draw a red rectangle.</li>
+                <ul>
+                    <li>Click Create to save that segment (it will turn blue)</li>
+                    <li>Click Discard otherwise</li>
+                </ul>
+                <li>Once done, copy the text generated in the textarea and save it. That text file will be loaded by the
+                    game.</li>
+            </ol>
+        </section>
+        <section id="tool">
+            <div class="v-pane">
+                <div>
+                    <button id="tile-clear">Clear</button>
+                    <button id="tile-add-area">Add 10</button>
+                </div>
+            </div>
+            <div class="v-pane" id="grid"></div>
+            <div class="v-pane">
+                <div>
+                    <button id="tile-create">Create</button>
+                    <button id="tile-discard">Discard</button>
+                </div>
+                <label>
+                    <input type="radio" name="layer" value="0" checked="true" /><span>Base</span>
+                </label>
+                <label>
+                    <input type="radio" name="layer" value="1" /><span>Obstacle</span>
+                </label>
+                <pre><code id="json"></code></pre>
+            </div>
+        </section>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js"
+        integrity="sha512-wBiNJt1JXeA/ra9F8K2jyO4Bnxr0dRPsy7JaMqSlxqTjUGHe1Z+Fm5HMjCWqkIYvp/oCbdJEivZ5pLvAtK0csQ=="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

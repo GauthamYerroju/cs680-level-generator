@@ -1,0 +1,64 @@
+body {
+    color: #ddd;
+    font-family: sans-serif;
+  background-color: #333;
+}
+#container {
+    max-width: 1024px;
+    margin: auto;
+}
+#title {
+    text-align: center;
+}
+#tool {
+    margin: auto;
+    max-width: 480px;
+}
+.v-pane {
+  display: inline-block;
+  vertical-align: top;
+}
+.tile {
+  color: #fff;
+  display: inline-block;
+  background-color: #00f;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+}
+.tile.hover {
+  background-color: rgba(255,0,0,0.5);
+  z-index: 100;
+}
+.tile.hover.clicked {
+  display: none;
+}
+.tile.tmpTile {
+  display: none;
+  background-color: rgba(255,0,0,0.25);
+  z-index: 99;
+}
+.tile.tmpTile.dragged {
+  display: inline-block;
+}
+.tile.drawn {
+  background-color: rgba(64,64,255,0.75);
+}
+#json {
+  display: inline-block;
+  height: 5em;
+  background-color: #eee;
+  font-family: monospace;
+}
+#grid {
+  width: 169px;
+  height: 241px;
+  background-image: linear-gradient(rgba(255,255,255,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-repeat: repeat;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
